@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  border: 1px solid black;
+  .nav {
+    border: 1px solid black;
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .nav_logo_wrap {
+    }
+    .nav_menu_wrap {
+    }
+  }
+}
+.main {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+
+  border: 1px solid black;
+
+  .footer_btn_wrap {
+    display: flex;
+    justify-content: center;
+    > a {
+      margin: 1rem;
+    }
+  }
+  > p {
+    text-align: center;
+  }
+}
