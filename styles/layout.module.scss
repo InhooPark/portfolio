@@ -1,15 +1,28 @@
 .header {
   width: 100%;
-  border: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  &.scroll {
+    border-bottom: 1px solid #000000;
+    background-color: #ffffff;
+  }
   .nav {
-    border: 1px solid black;
     max-width: 72rem;
+    height: 100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    .nav_logo_wrap {
-    }
-    .nav_menu_wrap {
+    > div {
+      display: flex;
+      > button {
+        width: 100px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #000000;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -20,17 +33,59 @@
 
 .footer {
   width: 100%;
-
-  border: 1px solid black;
-
+  background-color: #000000;
+  color: #ffffff;
+  padding: 30px 0;
   .footer_btn_wrap {
     display: flex;
     justify-content: center;
-    > a {
-      margin: 1rem;
+    > button {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      > svg {
+        height: 45px;
+        fill: #ffffff;
+      }
+      > span {
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .footer_info {
+    > p {
+      text-align: center;
+      color: #aaaaaa;
     }
   }
   > p {
     text-align: center;
+    padding: 30px 0;
+  }
+  .contact_popup {
+    padding: 15px 20px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    color: #ffffff;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    &.on {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

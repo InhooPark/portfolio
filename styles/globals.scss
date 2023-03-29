@@ -1,9 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "taebeak";
+  src: url("/font/TAEBAEK.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_thin";
+  src: url("/font/Jamsil/Jamsil1_Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_light";
+  src: url("/font/Jamsil/Jamsil2_Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_regular";
+  src: url("/font/Jamsil/Jamsil3_Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_medium";
+  src: url("/font/Jamsil/Jamsil4_Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_bold";
+  src: url("/font/Jamsil/Jamsil5_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "jamsil_exbold";
+  src: url("/font/Jamsil/Jamsil6_ExtraBold.ttf") format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html,
 body {
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: jamsil_light;
+}
+
+b,
+strong {
+  font-family: jamsil_bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: jamsil_exbold;
 }

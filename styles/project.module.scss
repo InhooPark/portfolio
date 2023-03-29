@@ -1,0 +1,11 @@
+.project_main {
+  width: 100%;
+  margin-top: 100px;
+  .project_section {
+    max-width: 72rem;
+    margin: 0 auto;
+    article {
+      border: 1px solid blue;
+    }
+  }
+}

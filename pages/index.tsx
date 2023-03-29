@@ -1,11 +1,12 @@
 import Headmeta from "@/src/Headmeta";
+import Intro from "@/src/Intro";
 import Layout from "@/src/Layout";
 
 export default function Home() {
   return (
-    <Layout>
+    <main>
       <Headmeta title="Kestrel's Portfolio"></Headmeta>
-      <main>Home</main>
-    </Layout>
+      <Intro></Intro>
+    </main>
   );
 }
