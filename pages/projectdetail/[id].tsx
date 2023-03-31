@@ -20,10 +20,19 @@ export const getStaticPaths = async () => {
     auth: process.env.NOTION_SECRET,
   });
 
+  const paths = ["t", "e", "s", "t"];
   //   const data = await notion.blocks.children.list({
   //     block_id: process.env.PAGE_ID,
   //   });
+  return {
+    paths,
+    fallback: false,
+  };
 };
-export const getStaticProps = async ({ params: { id } }: typeParams) => {};
+export const getStaticProps = async ({ params: { id } }: typeParams) => {
+  return {
+    props: {},
+  };
+};
 
 export default Projectdetail;
