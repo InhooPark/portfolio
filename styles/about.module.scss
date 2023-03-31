@@ -37,6 +37,7 @@
   }
   .profile_section {
     max-width: 72rem;
+    width: 90%;
     margin: 5rem auto;
     > h2 {
       font-size: 4rem;
@@ -75,9 +76,12 @@
     }
   }
   .archive_section {
+    max-width: 72rem;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     > h2 {
       font-size: 4rem;
       width: 100%;

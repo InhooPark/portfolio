@@ -3,9 +3,57 @@
   margin-top: 100px;
   .project_section {
     max-width: 72rem;
+    width: 90%;
     margin: 0 auto;
+    margin-top: 200px;
     article {
-      border: 1px solid blue;
+      border: 1px solid #000000;
+      margin: 5rem auto;
+      padding: 0 0 2rem;
+      > h4 {
+        text-align: center;
+        font-size: 3rem;
+        padding: 0;
+        margin: 2rem;
+      }
+      > figure {
+        display: flex;
+        .project_img_wrap {
+          width: 50%;
+          .mySwiper {
+            width: 100%;
+            .swiper_content {
+              width: 100%;
+              > img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .project_summary {
+          width: 50%;
+          position: relative;
+          .project_summary_text {
+            font-size: 1.2rem;
+            padding-left: 2rem;
+            line-height: 1;
+          }
+          > button {
+            width: 6rem;
+            height: 2rem;
+            font-family: jamsil_light;
+            border: none;
+            background-color: #000000;
+            color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 0.3rem;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

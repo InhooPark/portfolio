@@ -14,7 +14,7 @@ const Nav = () => {
         router.push("/contact");
         break;
       case "PROJECT":
-        router.push("project");
+        router.push("/projects");
         break;
       default:
         return;
@@ -25,7 +25,7 @@ const Nav = () => {
     <nav className={Style.nav}>
       <div className={Style.nav_logo_wrap}>
         <button type="button" onClick={() => toPage("ABOUT")}>
-          HOME
+          PIH's Portfolio
         </button>
       </div>
       <div className={Style.nav_menu_wrap}>

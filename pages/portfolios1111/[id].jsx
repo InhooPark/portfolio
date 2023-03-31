@@ -1,7 +1,14 @@
 import { Client } from "@notionhq/client";
 
-const Portfolio = ({ portfolio, subtitle, title, content }) => {
-  return <pre>{JSON.stringify(content, null, 2)}</pre>;
+const Portfolio = ({ page, portfolio, image }) => {
+  return (
+    <>
+      <pre>{JSON.stringify(portfolio, null, 2)}</pre>
+      {image.map((img) => {
+        return <img src={img} alt="img" />;
+      })}
+    </>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -36,7 +43,7 @@ export const getStaticProps = async ({ params: { id } }) => {
     auth: process.env.NOTION_SECRET,
   });
 
-  const page = await notion.pages.retrieve({
+  const pages = await notion.pages.retrieve({
     page_id: id,
   });
 
@@ -44,34 +51,28 @@ export const getStaticProps = async ({ params: { id } }) => {
     block_id: id,
   });
 
-  let title = [];
-  const subtitle = [];
-  const content = [];
+  let title = "";
+  let imgID = "";
+  const images = [];
 
   blocks.results.forEach((block) => {
-    if (block.type == "heading_1") {
-      title = block.heading_1.rich_text[0].plain_text;
+    if (block.child_page.title === "이미지") {
+      imgID = block.id;
     }
+  });
 
-    if (block.type === "heading_2") {
-      block.heading_2.rich_text.map((v) => {
-        subtitle.push(v.plain_text);
-      });
-    }
-
-    if (block.type === "paragraph") {
-      block.paragraph.rich_text.map((v) => {
-        content.push(v.plain_text);
-      });
-    }
+  const imageblocks = await notion.blocks.children.list({
+    block_id: imgID,
+  });
+  imageblocks.results.forEach((img) => {
+    images.push(img.image.file.url);
   });
 
   return {
     props: {
+      page: pages,
       portfolio: blocks,
-      subtitle: subtitle,
-      title: title,
-      content: content,
+      image: images,
     },
   };
 };
