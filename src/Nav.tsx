@@ -25,15 +25,15 @@ const Nav = () => {
     <nav className={Style.nav}>
       <div className={Style.nav_logo_wrap}>
         <button type="button" onClick={() => toPage("ABOUT")}>
-          PIH's Portfolio
+          {"PIH's Portfolio"}
         </button>
       </div>
       <div className={Style.nav_menu_wrap}>
         <button type="button" onClick={() => toPage("ABOUT")}>
-          ABOUT
+          {"ABOUT"}
         </button>
         <button type="button" onClick={() => toPage("PROJECT")}>
-          PROJECT
+          {"PROJECT"}
         </button>
       </div>
     </nav>
