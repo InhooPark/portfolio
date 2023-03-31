@@ -6,6 +6,9 @@
   &.scroll {
     border-bottom: 1px solid #00000033;
     background-color: #ffffff;
+    .nav > div > button {
+      color: #000000;
+    }
   }
   .nav {
     max-width: 72rem;
@@ -22,7 +25,7 @@
         outline: none;
         background-color: transparent;
         font-size: 1.2rem;
-        color: #000000;
+        color: #ffffff;
         cursor: pointer;
       }
 
@@ -31,6 +34,10 @@
           width: 150px;
         }
       }
+    }
+
+    &.color_on > div > button {
+      color: #000000;
     }
   }
 }

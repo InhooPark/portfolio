@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Style from "@/styles/layout.module.scss";
 import { useRouter } from "next/router";
 
@@ -21,8 +21,17 @@ const Nav = () => {
     }
   }
 
+  const [color, setColor] = useState(false);
+  useEffect(() => {
+    if (location.pathname !== "/about") {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }, []);
+
   return (
-    <nav className={Style.nav}>
+    <nav className={color ? `${Style.nav} ${Style.color_on}` : Style.nav}>
       <div className={Style.nav_logo_wrap}>
         <button type="button" onClick={() => toPage("ABOUT")}>
           {"PIH's Portfolio"}

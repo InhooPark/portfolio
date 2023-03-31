@@ -6,6 +6,7 @@ import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useRouter } from "next/router";
 
 type typeProject = {
   title: string;
@@ -14,9 +15,11 @@ type typeProject = {
   id: string;
 };
 const Project = ({ title, callout, images, id }: typeProject) => {
+  const router = useRouter();
   function moreClick() {
-    console.log(id);
+    router.push(`/projectdetail/${id}`);
   }
+
   return (
     <article>
       <h4>{title}</h4>
@@ -42,14 +45,11 @@ const Project = ({ title, callout, images, id }: typeProject) => {
           </Swiper>
         </div>
         <figcaption className={Style.project_summary}>
-          {/* <pre>{callout}</pre> */}
           {callout.split("\n").map((vv, kk) => {
             return (
-              <>
-                <p className={Style.project_summary_text} key={kk}>
-                  {vv}
-                </p>
-              </>
+              <p className={Style.project_summary_text} key={kk}>
+                {vv}
+              </p>
             );
           })}
           <button type="button" onClick={moreClick}>

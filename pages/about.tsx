@@ -30,7 +30,7 @@ const About = () => {
       <main className={Style.about_main}>
         <section className={Style.title_section}>
           <div className={Style.title_visual_img_wrap}>
-            <img src="" alt="about visual image"></img>
+            <img src="/img/visual.jpg" alt="about visual image"></img>
           </div>
           <div className={Style.title_text}>
             <h1>박인후 포트폴리오</h1>
