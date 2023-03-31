@@ -3,11 +3,11 @@ import React, { useEffect } from "react";
 
 const Intro = () => {
   const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      router.replace("/about");
-    }, 500);
-  }, []);
+
+  setTimeout(() => {
+    router.replace("/about");
+  }, 500);
+
   return <div>Intro</div>;
 };
 
