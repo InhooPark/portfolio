@@ -23,7 +23,7 @@ const About = () => {
   useEffect(() => {
     let age = ageFunc();
     setMyAge(age);
-  }, []);
+  }, [myAge]);
 
   return (
     <Layout>

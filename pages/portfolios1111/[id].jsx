@@ -78,3 +78,10 @@
 // };
 
 // export default Portfolio;
+import React from "react";
+
+const Portfolios1111 = () => {
+  return <div>[id]</div>;
+};
+
+export default Portfolios1111;
