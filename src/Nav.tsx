@@ -12,8 +12,8 @@ const Nav = () => {
   const [projectBrush, setProjectBrush] = useState(false);
   const { randomBrushType, randomBrushColor }: any = useContext(MyContext);
 
-  const [brushcolor, setBrushcolor] = useState();
-  const [brushtype, setBrushtype] = useState();
+  const [brushcolor, setBrushcolor] = useState("");
+  const [brushtype, setBrushtype] = useState("");
 
   function setbrush() {
     let color = randomBrushColor();
