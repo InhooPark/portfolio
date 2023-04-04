@@ -78,40 +78,38 @@ const Nav = () => {
     }
   }, []);
 
-  if (brushcolor !== undefined && brushtype !== undefined) {
-    return (
-      <nav className={color ? `${Style.nav} ${Style.color_on}` : Style.nav}>
-        <div className={Style.nav_logo_wrap}>
-          <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("LOGO")} onMouseLeave={() => menuLeave("LOGO")}>
-            <div className={logoBrush ? `${Style.on}` : ""}>
-              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-                <path d={`${brushtype}`} />
-              </svg>
-            </div>
-            <p>{"PIH's Portfolio"}</p>
-          </button>
-        </div>
-        <div className={Style.nav_menu_wrap}>
-          <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("ABOUT")} onMouseLeave={() => menuLeave("ABOUT")}>
-            <div className={aboutBrush ? `${Style.on}` : ""}>
-              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-                <path d={`${brushtype}`} />
-              </svg>
-            </div>
-            <p>{"ABOUT"}</p>
-          </button>
-          <button type="button" onClick={() => toPage("PROJECT")} onMouseEnter={() => menuEnter("PROJECT")} onMouseLeave={() => menuLeave("PROJECT")}>
-            <div className={projectBrush ? `${Style.on}` : ""}>
-              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-                <path d={`${brushtype}`} />
-              </svg>
-            </div>
-            <p>{"PROJECT"}</p>
-          </button>
-        </div>
-      </nav>
-    );
-  }
+  return (
+    <nav className={color ? `${Style.nav} ${Style.color_on}` : Style.nav}>
+      <div className={Style.nav_logo_wrap}>
+        <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("LOGO")} onMouseLeave={() => menuLeave("LOGO")}>
+          <div className={logoBrush ? `${Style.on}` : ""}>
+            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+              <path d={`${brushtype}`} />
+            </svg>
+          </div>
+          <p>{"PIH's Portfolio"}</p>
+        </button>
+      </div>
+      <div className={Style.nav_menu_wrap}>
+        <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("ABOUT")} onMouseLeave={() => menuLeave("ABOUT")}>
+          <div className={aboutBrush ? `${Style.on}` : ""}>
+            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+              <path d={`${brushtype}`} />
+            </svg>
+          </div>
+          <p>{"ABOUT"}</p>
+        </button>
+        <button type="button" onClick={() => toPage("PROJECT")} onMouseEnter={() => menuEnter("PROJECT")} onMouseLeave={() => menuLeave("PROJECT")}>
+          <div className={projectBrush ? `${Style.on}` : ""}>
+            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+              <path d={`${brushtype}`} />
+            </svg>
+          </div>
+          <p>{"PROJECT"}</p>
+        </button>
+      </div>
+    </nav>
+  );
 };
 
 export default Nav;
