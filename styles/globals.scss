@@ -52,3 +52,9 @@ h5,
 h6 {
   font-family: jamsil_exbold;
 }
+
+.swiper-pagination {
+  position: relative !important;
+  // text-align: right !important;
+  transform: translate3d(0, 10px, 0) !important;
+}

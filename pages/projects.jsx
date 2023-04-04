@@ -39,6 +39,7 @@ export const getStaticProps = async () => {
   const imageids = [];
   let images = [];
   const imagesArr = [];
+  const summaryids = [];
 
   data.results.map((value, key) => {
     ids[key] = data.results[key].id;
@@ -55,7 +56,9 @@ export const getStaticProps = async () => {
         callouts[key] = callout.callout.rich_text[0].plain_text;
       }
       if (callout.type === "child_page") {
-        imageids[key] = callout.id;
+        if (callout.child_page.title === "이미지") {
+          imageids[key] = callout.id;
+        }
       }
     });
   });

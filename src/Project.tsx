@@ -1,11 +1,10 @@
 import React from "react";
 import Style from "@/styles/project.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import { Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { useRouter } from "next/router";
 
 type typeProject = {
@@ -31,8 +30,9 @@ const Project = ({ title, callout, images, id }: typeProject) => {
             loop={true}
             pagination={{
               clickable: true,
+              type: "fraction",
             }}
-            modules={[Autoplay, Pagination]}
+            modules={[Pagination]}
             className={`${Style.mySwiper} ${Style.swiper_wrap}`}
           >
             {images.map((img: string, k: number) => {
@@ -46,10 +46,20 @@ const Project = ({ title, callout, images, id }: typeProject) => {
         </div>
         <figcaption className={Style.project_summary}>
           {callout.split("\n").map((vv, kk) => {
-            return (
-              <p className={Style.project_summary_text} key={kk}>
-                {vv}
-              </p>
+            return vv === "" ? (
+              <span key={kk}></span>
+            ) : (
+              <div className={Style.project_summary_text} key={kk}>
+                {callout.split("\n").length - 1 === kk ? (
+                  <a href={vv} target="_blank">
+                    {vv}
+                  </a>
+                ) : vv === "후기" || vv === "개발 배경" || vv === "기술 스택" || vv === "배포" ? (
+                  <p className={Style.project_summary_title}>{vv}</p>
+                ) : (
+                  <p>{vv}</p>
+                )}
+              </div>
             );
           })}
           <button type="button" onClick={moreClick}>

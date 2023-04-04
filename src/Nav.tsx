@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 const Nav = () => {
   const router = useRouter();
 
+  const [color, setColor] = useState(false);
+
   function toPage(page: string) {
     switch (page) {
       case "ABOUT":
@@ -21,7 +23,6 @@ const Nav = () => {
     }
   }
 
-  const [color, setColor] = useState(false);
   useEffect(() => {
     if (location.pathname !== "/about") {
       setColor(true);
