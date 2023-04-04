@@ -10,7 +10,7 @@ const Nav = () => {
   const [logoBrush, setLogoBrush] = useState(false);
   const [aboutBrush, setAboutBrush] = useState(false);
   const [projectBrush, setProjectBrush] = useState(false);
-  const { randomBrushType, randomBrushColor } = useContext(MyContext);
+  const { randomBrushType, randomBrushColor }: any = useContext(MyContext);
 
   const [brushcolor, setBrushcolor] = useState();
   const [brushtype, setBrushtype] = useState();

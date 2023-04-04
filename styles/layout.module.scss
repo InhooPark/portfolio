@@ -92,15 +92,27 @@
       border: none;
       outline: none;
       background-color: transparent;
+
       cursor: pointer;
       > svg {
         height: 45px;
         fill: #ffffff;
+        transition: 100ms;
       }
       > span {
         color: #ffffff;
         text-align: center;
         font-size: 1.5rem;
+        transition: 100ms;
+      }
+
+      &:hover {
+        > svg {
+          fill: #f47321;
+        }
+        span {
+          color: #f47321;
+        }
       }
     }
   }

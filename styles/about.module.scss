@@ -80,7 +80,7 @@
   .archive_section {
     max-width: 72rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 8rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -91,11 +91,15 @@
     }
     > article {
       display: inline-block;
-      width: 25%;
+      width: 30%;
       vertical-align: top;
+      border: 1px solid #00000033;
+      border-radius: 1rem;
+      box-shadow: 5px 5px 5px #00000088;
+      transition: 200ms;
       > a {
         display: block;
-        width: max-content;
+        width: 100%;
         margin: 0 auto;
         color: initial;
         text-decoration: none;
@@ -124,6 +128,22 @@
               }
             }
           }
+        }
+      }
+      &:hover {
+        transform: translate(5px, 5px);
+        box-shadow: none;
+        background-color: #399ca3bb;
+        .archive_logo_img_wrap {
+          > svg {
+            // fill: #f47341;
+          }
+          > span {
+            // color: #f47321;
+          }
+        }
+        > a > figure > figcaption {
+          // color: ;
         }
       }
     }
