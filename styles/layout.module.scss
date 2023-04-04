@@ -27,11 +27,29 @@
         font-size: 1.2rem;
         color: #ffffff;
         cursor: pointer;
+        position: relative;
+        > div {
+          width: 0%;
+          position: absolute;
+          top: 40%;
+          left: 0;
+          z-index: -10;
+          transform-origin: left;
+          transition: width 150ms;
+          transition: 150ms;
+          &.on {
+            width: 100%;
+          }
+        }
       }
 
       &.nav_logo_wrap {
         > button {
           width: 150px;
+          position: relative;
+          > div {
+            top: 35%;
+          }
         }
       }
     }
@@ -39,6 +57,16 @@
     &.color_on > div > button {
       color: #000000;
     }
+  }
+}
+@keyframes svgStroke {
+  from {
+    stroke-dashoffset: 1000;
+    scale: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    scale: 1;
   }
 }
 .main {
