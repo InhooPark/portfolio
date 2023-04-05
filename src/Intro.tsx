@@ -6,17 +6,24 @@ const Intro = () => {
   const router = useRouter();
   const [maskimg, setMaskimg] = useState("00.jpg");
   const [bgcolor, setBgcolor] = useState("EEEAEB");
+  const [appealText, setAppealText] = useState("");
+  const [checkHover, setCheckHover] = useState(false);
 
   const color = ["F4BE1D", "399CA3", "F48D20", "57ABAD"];
   const img = ["cook.gif", "swim.gif", "game.gif", "matrix.gif"];
+  const appeal = ["Diligence", "Patience", "Creative", "Effort"];
 
   function profileOver(quadrant: number) {
     setBgcolor(color[quadrant - 1]);
     setMaskimg(img[quadrant - 1]);
+    setAppealText(appeal[quadrant - 1]);
+    setCheckHover(true);
   }
   function profileLeave(quadrant: number) {
     setMaskimg("00.jpg");
     setBgcolor("EEEAEB");
+    setAppealText("");
+    setCheckHover(false);
   }
   function toAbout() {
     router.push("/about");
@@ -40,29 +47,16 @@ const Intro = () => {
           </div>
         </div>
         <div className={Style.intro_right_block} style={{ backgroundColor: `#${bgcolor}` }}>
-          {maskimg === "game.gif" ? (
-            <h1 style={{ backgroundImage: `url("/img/testimg/${maskimg}")`, backgroundPositionY: "-2.5vh" }}>
-              {"PIH's"} <br />
-              {"Portfolio"}
-              <br />
-              <div className={Style.intro_right_block_toAbout}>
-                <div className={Style.intro_toAbout_wrap} onClick={toAbout}>
-                  <p>{"➡"}</p>
-                </div>
-              </div>
-            </h1>
-          ) : (
+          {
             <h1 style={{ backgroundImage: `url("/img/testimg/${maskimg}")` }}>
               {"PIH's"} <br />
               {"Portfolio"}
               <br />
-              <div className={Style.intro_right_block_toAbout}>
-                <div className={Style.intro_toAbout_wrap} onClick={toAbout}>
-                  <p>{"➡"}</p>
-                </div>
-              </div>
+              <span className={checkHover ? `${Style.appeal} ${Style.on}` : Style.appeal}>{appealText}</span>
+              <br />
+              <span onClick={toAbout}>{"➡"}</span>
             </h1>
-          )}
+          }
         </div>
       </section>
     </main>

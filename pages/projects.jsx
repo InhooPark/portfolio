@@ -46,7 +46,7 @@ export const getStaticProps = async () => {
     titles[key] = value.child_page.title;
   });
 
-  let delay = ids.map(async (id, key) => {
+  let idDelay = ids.map(async (id, key) => {
     const calls = await notion.blocks.children.list({
       block_id: id,
     });
@@ -62,9 +62,9 @@ export const getStaticProps = async () => {
       }
     });
   });
-  await Promise.all(delay);
+  await Promise.all(idDelay);
 
-  let delay2 = imageids.map(async (id, key) => {
+  let imageDelay = imageids.map(async (id, key) => {
     const imgs = await notion.blocks.children.list({
       block_id: id,
     });
@@ -74,7 +74,7 @@ export const getStaticProps = async () => {
     imagesArr[key] = images;
     images = [];
   });
-  await Promise.all(delay2);
+  await Promise.all(imageDelay);
 
   return {
     props: {
