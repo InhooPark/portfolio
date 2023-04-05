@@ -1,5 +1,5 @@
 .cursor {
-  width: 20px;
+  width: 10px;
   height: 20px;
   background-color: black;
   background-repeat: no-repeat;
@@ -9,19 +9,4 @@
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-  &:nth-of-type(1) {
-    background-color: red;
-  }
-  &:nth-of-type(2) {
-    background-color: orange;
-  }
-  &:nth-of-type(3) {
-    background-color: yellow;
-  }
-  &:nth-of-type(4) {
-    background-color: green;
-  }
-  &:nth-of-type(5) {
-    background-color: blue;
-  }
 }
