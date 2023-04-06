@@ -88,12 +88,13 @@
       align-items: center;
       margin: 10px;
       padding: 10px;
-
       border: none;
       outline: none;
       background-color: transparent;
-
       cursor: pointer;
+
+      position: relative;
+      z-index: 2;
       > svg {
         height: 45px;
         fill: #ffffff;
@@ -139,6 +140,7 @@
     transition: 400ms ease-out;
     opacity: 0;
     visibility: hidden;
+    z-index: 3;
     &.on {
       opacity: 1;
       visibility: visible;

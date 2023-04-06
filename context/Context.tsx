@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from "react";
 
 export const MyContext = createContext(null);
 const Context = ({ children }: any) => {
@@ -10,6 +10,7 @@ const Context = ({ children }: any) => {
   ];
   const color = ["F4BE1D", "F47321", "F48D20", "399CA3", "57ABAD"];
   // 너무 흰색임 "EEEAEB"
+  const [windowHeight, setWindowHeigth] = useState(0);
 
   function randomBrushType(): string {
     let ranbrushtype = Math.floor(Math.random() * brush.length);
@@ -20,7 +21,7 @@ const Context = ({ children }: any) => {
     return color[ranbrushcolor];
   }
 
-  const value: any = { randomBrushType, randomBrushColor };
+  const value: any = { randomBrushType, randomBrushColor, windowHeight, setWindowHeigth };
   return <MyContext.Provider value={value}> {children} </MyContext.Provider>;
 };
 
