@@ -42,7 +42,7 @@ const Cursor = ({ x, y }: typeCursor) => {
       cursor.style.translate = "-50% -50%";
       cursor.style.opacity = "1";
       cursor.style.transition = "opacity 150ms";
-      cursor.style.backgroundImage = `url("/img/testpaint/paint${selectColor}.png")`;
+      cursor.style.backgroundImage = `url("/img/paint/paint${selectColor}.png")`;
       cursor.x = x;
       cursor.y = y;
 

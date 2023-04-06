@@ -48,7 +48,7 @@ const Intro = () => {
         </div>
         <div className={Style.intro_right_block} style={{ backgroundColor: `#${bgcolor}` }}>
           {
-            <h1 style={{ backgroundImage: `url("/img/testimg/${maskimg}")` }}>
+            <h1 style={{ backgroundImage: `url("/img/introimg/${maskimg}")` }}>
               {"PIH's"} <br />
               {"Portfolio"}
               <br />
