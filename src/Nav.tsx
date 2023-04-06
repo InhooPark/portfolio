@@ -7,9 +7,12 @@ const Nav = () => {
   const router = useRouter();
 
   const [color, setColor] = useState(false);
+
   const [logoBrush, setLogoBrush] = useState(false);
   const [aboutBrush, setAboutBrush] = useState(false);
   const [projectBrush, setProjectBrush] = useState(false);
+  const [toyBrush, setToyBrush] = useState(false);
+
   const { randomBrushType, randomBrushColor }: any = useContext(MyContext);
 
   const [brushcolor, setBrushcolor] = useState("");
@@ -33,6 +36,9 @@ const Nav = () => {
       case "PROJECT":
         router.push("/projects");
         break;
+      case "TOY":
+        router.push("/toyprojects");
+        break;
       default:
         return;
     }
@@ -49,6 +55,8 @@ const Nav = () => {
       case "PROJECT":
         setProjectBrush(true);
         break;
+      case "TOY":
+        setToyBrush(true);
       default:
         return;
     }
@@ -63,6 +71,9 @@ const Nav = () => {
         break;
       case "PROJECT":
         setProjectBrush(false);
+        break;
+      case "TOY":
+        setToyBrush(false);
         break;
       default:
         return;
@@ -106,6 +117,15 @@ const Nav = () => {
             </svg>
           </div>
           <p>{"PROJECT"}</p>
+        </button>
+
+        <button type="button" onClick={() => toPage("TOY")} onMouseEnter={() => menuEnter("TOY")} onMouseLeave={() => menuLeave("TOY")}>
+          <div className={toyBrush ? `${Style.on}` : ""}>
+            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+              <path d={`${brushtype}`} />
+            </svg>
+          </div>
+          <p>{"TOY"}</p>
         </button>
       </div>
     </nav>

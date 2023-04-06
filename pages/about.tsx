@@ -1,5 +1,4 @@
 import Layout from "@/src/Layout";
-import MouseEvent from "@/src/MouseEvent";
 import React, { useEffect, useState } from "react";
 import Style from "@/styles/about.module.scss";
 import Link from "next/link";
@@ -28,7 +27,6 @@ const About = () => {
 
   return (
     <Layout>
-      <MouseEvent />
       <main className={Style.about_main}>
         <section className={Style.title_section}>
           <div className={Style.title_visual_img_wrap}>
