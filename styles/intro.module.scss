@@ -14,31 +14,16 @@
       align-items: center;
       .intro_left_profile_wrap {
         width: 100%;
-        aspect-ratio: 2/3;
-        max-height: 100%;
+        aspect-ratio: 1;
         display: flex;
         flex-wrap: wrap;
         .intro_left_block_img_wrap {
           width: 50%;
           height: 50%;
-          // border: 1px solid #00000088;
           overflow: hidden;
           display: flex;
           justify-content: center;
           align-items: center;
-          .svg {
-            width: 100%;
-          }
-          &:nth-child(1) {
-            border-bottom: none;
-            border-right: none;
-          }
-          &:nth-child(2) {
-            border-bottom: none;
-          }
-          &:nth-child(3) {
-            border-right: none;
-          }
         }
       }
     }
