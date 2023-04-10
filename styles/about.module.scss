@@ -63,12 +63,27 @@
       > figure {
         display: flex;
         .profile_img_wrap {
-          width: 10rem;
-          height: 10rem;
+          width: 14vw;
+          max-width: 160px;
+          height: 14vw;
+          max-height: 160px;
           overflow: hidden;
           border-radius: 50%;
-          border: 1px solid black;
+          border: 1px solid #00000033;
+          transition: 300ms;
           img {
+            width: 100%;
+            transition: 300ms;
+            transform-origin: top;
+            transform: translateY(10px);
+            // top: 10px;
+          }
+          &:hover {
+            background-color: #399ca3;
+            border: 1px solid #399ca3;
+            > img {
+              scale: 1.4;
+            }
           }
         }
         > figcaption {

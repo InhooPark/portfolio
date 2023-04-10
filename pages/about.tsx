@@ -66,7 +66,7 @@ const About = () => {
           <article className={Style.profile_about}>
             <figure>
               <div className={Style.profile_img_wrap}>
-                <img src="" alt="profile image"></img>
+                <img src="/img/profile/300.png" alt="profile image"></img>
               </div>
               <figcaption>{"profile content"}</figcaption>
             </figure>

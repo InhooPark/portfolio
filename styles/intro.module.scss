@@ -11,28 +11,31 @@
       width: 50%;
       height: 100%;
       display: flex;
-      flex-wrap: wrap;
-      .intro_left_block_img_wrap {
-        width: 50%;
-        height: 50%;
-        border: 1px solid #00000088;
-        > img {
-          width: 100%;
-          height: 100%;
-        }
-        &:nth-child(1) {
-          border: none;
-        }
-        &:nth-child(2) {
-          border-top: none;
-          border-bottom: none;
-        }
-        &:nth-child(3) {
-          border-right: none;
-          border-left: none;
-        }
-        &:nth-child(4) {
-          border-bottom: none;
+      align-items: center;
+      .intro_left_profile_wrap {
+        width: 100%;
+        aspect-ratio: 2/3;
+        max-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .intro_left_block_img_wrap {
+          width: 50%;
+          height: 50%;
+          // border: 1px solid #00000088;
+          overflow: hidden;
+          .svg {
+            width: 100%;
+          }
+          &:nth-child(1) {
+            border-bottom: none;
+            border-right: none;
+          }
+          &:nth-child(2) {
+            border-bottom: none;
+          }
+          &:nth-child(3) {
+            border-right: none;
+          }
         }
       }
     }
