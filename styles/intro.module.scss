@@ -23,6 +23,9 @@
           height: 50%;
           // border: 1px solid #00000088;
           overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           .svg {
             width: 100%;
           }
