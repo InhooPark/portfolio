@@ -65,18 +65,17 @@
         .profile_img_wrap {
           width: 14vw;
           max-width: 160px;
-          height: 14vw;
-          max-height: 160px;
+          aspect-ratio: 1;
           overflow: hidden;
           border-radius: 50%;
           border: 1px solid #00000033;
           transition: 300ms;
           img {
             width: 100%;
+            aspect-ratio: 1;
             transition: 300ms;
             transform-origin: top;
-            transform: translateY(10px);
-            // top: 10px;
+            transform: translateY(10%);
           }
           &:hover {
             background-color: #399ca3;
@@ -86,8 +85,14 @@
             }
           }
         }
-        > figcaption {
-          margin: 0.5rem;
+
+        .profile_info_container {
+          flex-grow: 1;
+          margin-left: 1vw;
+          > p {
+            margin: 4px 0;
+            word-break: keep-all;
+          }
         }
       }
     }

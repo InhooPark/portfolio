@@ -12,6 +12,7 @@
       height: 100%;
       display: flex;
       align-items: center;
+      border-right: 1px solid black;
       .intro_left_profile_wrap {
         width: 100%;
         aspect-ratio: 1;
@@ -24,6 +25,19 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          .testsvg {
+            display: block;
+            &.teston {
+              display: none;
+            }
+          }
+          .testimg {
+            width: 100%;
+            display: none;
+            &.teston {
+              display: block;
+            }
+          }
         }
       }
     }
@@ -34,7 +48,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // background-color: gray;
       > h1 {
         font-size: 10vw;
         font-family: jamsil_exbold;

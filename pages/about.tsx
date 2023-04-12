@@ -43,6 +43,7 @@ const About = () => {
         </section>
         <section className={Style.profile_section}>
           <h2> Profile </h2>
+
           <article className={Style.profile_info}>
             <p>
               <b>{"Name"}</b>
@@ -63,12 +64,18 @@ const About = () => {
               <small>{"Uijeongbu-si, Gyeonggi-do, Republic of Korea"}</small>
             </p>
           </article>
+
           <article className={Style.profile_about}>
             <figure>
               <div className={Style.profile_img_wrap}>
                 <img src="/img/profile/300.png" alt="profile image"></img>
               </div>
-              <figcaption>{"profile content"}</figcaption>
+              <figcaption className={Style.profile_info_container}>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+              </figcaption>
             </figure>
           </article>
         </section>

@@ -108,7 +108,7 @@ const Nav = () => {
               <path d={`${brushtype}`} />
             </svg>
           </div>
-          <p>{"ABOUT"}</p>
+          <p>{"About me"}</p>
         </button>
         <button type="button" onClick={() => toPage("PROJECT")} onMouseEnter={() => menuEnter("PROJECT")} onMouseLeave={() => menuLeave("PROJECT")}>
           <div className={projectBrush ? `${Style.on}` : ""}>
@@ -116,7 +116,7 @@ const Nav = () => {
               <path d={`${brushtype}`} />
             </svg>
           </div>
-          <p>{"PROJECT"}</p>
+          <p>{"Projects"}</p>
         </button>
 
         <button type="button" onClick={() => toPage("TOY")} onMouseEnter={() => menuEnter("TOY")} onMouseLeave={() => menuLeave("TOY")}>
@@ -125,7 +125,7 @@ const Nav = () => {
               <path d={`${brushtype}`} />
             </svg>
           </div>
-          <p>{"TOY"}</p>
+          <p>{"Toy Projects"}</p>
         </button>
       </div>
     </nav>
