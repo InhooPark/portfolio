@@ -72,9 +72,6 @@ const About = () => {
               </div>
               <figcaption className={Style.profile_info_container}>
                 <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <p>4</p>
               </figcaption>
             </figure>
           </article>
