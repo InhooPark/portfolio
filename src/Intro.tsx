@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "@/styles/intro.module.scss";
 import { useRouter } from "next/router";
 
@@ -28,6 +28,17 @@ const Intro3 = () => {
     setFirst(false);
     setSecond(true);
   }
+  function randomRotate() {
+    const random = [90, 180, 270];
+    let arr = [0, 0, 0, 0];
+    for (let i = 0; i < 4; i++) {
+      arr[i] = random[Math.floor(Math.random() * 3)];
+    }
+    setRotate(arr);
+  }
+  useEffect(() => {
+    randomRotate();
+  }, []);
 
   return (
     <main className={Style.intro_main}>
