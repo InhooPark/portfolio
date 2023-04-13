@@ -2,10 +2,12 @@ import React from "react";
 import Style from "@/styles/toyprojects.module.scss";
 import Layout from "@/src/Layout";
 import { Client } from "@notionhq/client";
+import Headmeta from "@/src/Headmeta";
 
 const Toyprojects = ({ titles, urls, imgurls }) => {
   return (
     <Layout>
+      <Headmeta title="Toy Projects" />
       <main className={Style.toy_main}>
         <section className={Style.toy_section}>
           <h2>TOY - PROJECT</h2>

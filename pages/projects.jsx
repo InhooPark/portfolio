@@ -2,6 +2,7 @@ import { Client } from "@notionhq/client";
 import Layout from "@/src/Layout";
 import Project from "@/src/Project";
 import Style from "@/styles/project.module.scss";
+import Headmeta from "@/src/Headmeta";
 
 // type typeProjects = {
 //   titles: string[];
@@ -13,6 +14,7 @@ import Style from "@/styles/project.module.scss";
 const Projects = ({ titles, callouts, images, ids }) => {
   return (
     <Layout>
+      <Headmeta title="Projects" />
       <main className={Style.project_main}>
         <section className={Style.project_section}>
           {titles.map((title, key) => {

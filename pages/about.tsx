@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Style from "@/styles/about.module.scss";
 import Link from "next/link";
 import Archive from "@/json/archive.json";
+import Headmeta from "@/src/Headmeta";
 
 const About = () => {
   const [myAge, setMyAge] = useState(Number);
@@ -32,19 +33,19 @@ const About = () => {
       // Special Event를 통한 나의 장단점같은거
       case 0:
         setBg("cook.gif");
-        setSpecialEvent("요리");
+        setSpecialEvent("요리를 통해 얻은것 열정");
         break;
       case 1:
         setBg("swim.gif");
-        setSpecialEvent("수영");
+        setSpecialEvent("수영을 통해 얻은것 균형");
         break;
       case 2:
         setBg("code.gif");
-        setSpecialEvent("코딩");
+        setSpecialEvent("코딩을 통해 얻은것 창조");
         break;
       case 3:
         setBg("game.gif");
-        setSpecialEvent("게임");
+        setSpecialEvent("게임을 통해 얻은것 노력");
         break;
       default:
         return;
@@ -64,6 +65,7 @@ const About = () => {
 
   return (
     <Layout>
+      <Headmeta title="About Me" />
       <main className={Style.about_main}>
         <section className={Style.title_section}>
           <div className={Style.title_visual_img_wrap}>
