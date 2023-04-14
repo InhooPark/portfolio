@@ -18,7 +18,6 @@ const Intro3 = () => {
     const result = arr.filter((value) => value === 0);
 
     if (result.length === 4) {
-      console.log("correct!");
       setFirst(false);
       setSecond(true);
     }
@@ -38,6 +37,7 @@ const Intro3 = () => {
   }
   useEffect(() => {
     randomRotate();
+    if (second) setRotate([0, 0, 0, 0]);
   }, []);
 
   return (
@@ -89,16 +89,20 @@ const Intro3 = () => {
       </section>
       <section className={second ? `${Style.intro_second} ${Style.intro_second_on}` : Style.intro_second}>
         <h1>{"PIH's Portfolio"}</h1>
-        <div className={second ? `${Style.to_about} ${Style.on}` : Style.to_about}>
-          <p
-            onClick={() => {
-              router.push("/about");
-            }}
-          >
-            <svg viewBox="0 96 960 960" width="10vw">
-              <path d="m480 896-42-43 247-247H160v-60h525L438 299l42-43 320 320-320 320Z" />
-            </svg>
-          </p>
+
+        <div className={Style.to_about_wrap}>
+          <p className={second ? Style.on : ""}>About me</p>
+          <div className={second ? `${Style.to_about} ${Style.on}` : Style.to_about}>
+            <p
+              onClick={() => {
+                router.push("/about");
+              }}
+            >
+              <svg viewBox="0 96 960 960" width="10vw">
+                <path d="m480 896-42-43 247-247H160v-60h525L438 299l42-43 320 320-320 320Z" />
+              </svg>
+            </p>
+          </div>
         </div>
       </section>
     </main>

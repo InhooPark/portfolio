@@ -2,19 +2,27 @@
   width: 100%;
   .title_section {
     position: relative;
-    max-height: 700px;
-    height: 90vh;
+    height: 100vh;
     .title_visual_img_wrap {
       position: absolute;
       top: 0;
       width: 100vw;
       height: 100%;
-      > img {
-        width: 100%;
+      overflow: hidden;
+
+      .visual_img {
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
+        position: absolute;
+        right: 0;
+        bottom: 0;
         z-index: -1;
-        filter: brightness(0.4);
+      }
+      .visual_corner {
+        height: 40%;
+        position: absolute;
+        top: -5%;
+        left: -5%;
       }
     }
     .title_text {
@@ -22,19 +30,44 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      color: #ffffff;
+      color: #000000;
       > h1 {
         text-align: center;
-        font-family: taebeak;
-        font-size: 3rem;
-        -webkit-text-stroke-width: 1.5px;
-        -webkit-text-stroke-color: #ffffff;
+        font-size: 6vw;
+        -webkit-text-stroke-width: 0.1vw;
+        font-family: jamsil_light;
+        -webkit-text-stroke-color: #000000;
       }
       > p {
-        font-family: taebeak;
-        font-size: 1.2rem;
+        font-size: 3vw;
         line-height: 1.5;
         text-align: center;
+      }
+    }
+
+    .visual_scroll {
+      position: absolute;
+      z-index: 20;
+      top: 50%;
+      left: 3%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > p {
+        width: 1px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          animation: scrollBarAnimation infinite 2000ms linear;
+        }
       }
     }
   }
@@ -43,7 +76,7 @@
     width: 90%;
     margin: 5rem auto;
     > h2 {
-      font-size: 4rem;
+      font-size: 4vw;
       text-align: center;
       width: 100%;
     }
@@ -55,7 +88,7 @@
     .profile_info {
       > p {
         > b {
-          line-height: 3;
+          line-height: 2.3;
         }
       }
     }
@@ -63,29 +96,16 @@
       > figure {
         display: flex;
         .profile_img_container {
-          .profile_img_wrap {
-            width: 14vw;
-            max-width: 160px;
-            aspect-ratio: 1;
-            overflow: hidden;
-            border-radius: 50%;
-            border: 1px solid #00000033;
-            transition: 150ms;
-            img {
-              width: 100%;
-              aspect-ratio: 1;
-              transform-origin: top;
-              transform: translateY(10%);
-            }
-          }
           .profile_icon_wrap {
-            width: 100%;
+            width: 6vw;
+            max-width: 80px;
+            min-width: 64px;
             display: flex;
             flex-wrap: wrap;
-            margin-top: 10px;
             .profile_icon {
-              width: 40%;
-              margin: 5%;
+              width: 80%;
+              margin-bottom: 20%;
+              padding: 10%;
               aspect-ratio: 1;
               border: 1px solid #00000033;
               border-radius: 8px;
@@ -111,14 +131,16 @@
           position: relative;
           .profile_info {
             margin: 4px 0;
-            word-break: keep-all;
+            word-break: break-all;
             opacity: 1;
             position: absolute;
             transition: opacity 300ms;
           }
           .profile_special {
             margin: 4px 0;
-            word-break: keep-all;
+            width: 100%;
+            white-space: pre-wrap;
+            word-break: break-all;
             opacity: 0;
             position: absolute;
             transition: opacity 300ms;
@@ -134,7 +156,11 @@
         }
       }
     }
+    .life_graph {
+      margin-top: 3rem;
+    }
   }
+
   .archive_section {
     max-width: 72rem;
     width: 90%;
@@ -143,7 +169,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     > h2 {
-      font-size: 4rem;
+      font-size: 4vw;
       width: 100%;
       text-align: center;
     }
@@ -191,13 +217,13 @@
       &:hover {
         transform: translate(5px, 5px);
         box-shadow: none;
-        background-color: #399ca3bb;
+        background-color: #57abad;
         .archive_logo_img_wrap {
           > svg {
-            // fill: #f47341;
+            // fill: #f47341bb;
           }
           > span {
-            // color: #f47321;
+            // color: #f47321bb;
           }
         }
         > a > figure > figcaption {
@@ -205,5 +231,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes scrollBarAnimation {
+  0% {
+    top: -120%;
+  }
+  100% {
+    top: 120%;
   }
 }

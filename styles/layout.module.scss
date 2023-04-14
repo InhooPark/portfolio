@@ -25,9 +25,12 @@
         outline: none;
         background-color: transparent;
         font-size: 1.2rem;
-        color: #ffffff;
+        color: #000000;
         cursor: pointer;
         position: relative;
+        &.here {
+          color: #f47321;
+        }
         > div {
           width: 0%;
           position: absolute;
@@ -47,15 +50,13 @@
         > button {
           width: 150px;
           position: relative;
+          font-family: jamsil_bold;
+          text-shadow: 1px 1px 2px #f47321;
           > div {
             top: 35%;
           }
         }
       }
-    }
-
-    &.color_on > div > button {
-      color: #000000;
     }
   }
 }

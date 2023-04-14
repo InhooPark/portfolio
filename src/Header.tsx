@@ -8,7 +8,7 @@ const Header = () => {
   const { setWindowHeigth }: any = useContext(MyContext);
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
