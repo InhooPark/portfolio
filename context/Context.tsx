@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from "react";
+import MouseEvent from "@/src/MouseEvent";
 
 export const MyContext = createContext(null);
 const Context = ({ children }: any) => {
@@ -27,7 +28,11 @@ const Context = ({ children }: any) => {
     windowHeight,
     setWindowHeigth,
   };
-  return <MyContext.Provider value={value}> {children} </MyContext.Provider>;
+  return (
+    <MyContext.Provider value={value}>
+      <MouseEvent /> {children}{" "}
+    </MyContext.Provider>
+  );
 };
 
 export default Context;
