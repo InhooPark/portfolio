@@ -1,9 +1,34 @@
 {
   "data": [
-    { "title": "Scheduler", "url": "https://inhoopark.github.io/toy_scheduler/", "img": "/img/toys/scheduler.png" },
-    { "title": "MyAvatar", "url": "https://inhoopark.github.io/toy_my_avatar/", "img": "/img/toys/myavatar.png" },
-    { "title": "BannerMaker", "url": "https://inhoopark.github.io/toy_banner_maker/", "img": "/img/toys/bannermaker.png" },
-    { "title": "RandomNickname", "url": "https://inhoopark.github.io/toy_random_nickname/", "img": "/img/toys/randomnickname.png" },
-    { "title": "AmbientSound", "url": "https://inhoopark.github.io/toy_ambient/", "img": "/img/toys/ambient.png" }
+    {
+      "title": "Scheduler",
+      "url": "https://inhoopark.github.io/toy_scheduler/",
+      "img": "/img/toys/scheduler.png",
+      "info": "LocalStorage에 저장되는 스케줄표!"
+    },
+    {
+      "title": "MyAvatar",
+      "url": "https://inhoopark.github.io/toy_my_avatar/",
+      "img": "/img/toys/myavatar.png",
+      "info": "나만의 미니미를 제작해보세요"
+    },
+    {
+      "title": "BannerMaker",
+      "url": "https://inhoopark.github.io/toy_banner_maker/",
+      "img": "/img/toys/bannermaker.png",
+      "info": "간단한 배너를 제작해보세요"
+    },
+    {
+      "title": "RandomNickname",
+      "url": "https://inhoopark.github.io/toy_random_nickname/",
+      "img": "/img/toys/randomnickname.png",
+      "info": "닉네임을 만들기 어렵다면?"
+    },
+    {
+      "title": "AmbientSound",
+      "url": "https://inhoopark.github.io/toy_ambient/",
+      "img": "/img/toys/ambient.png",
+      "info": "머리를 비우고 싶을때"
+    }
   ]
 }

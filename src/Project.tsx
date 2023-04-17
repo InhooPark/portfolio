@@ -51,7 +51,7 @@ const Project = ({ data }: typeProject) => {
             return (
               <div key={key} className={Style.project_summary_text}>
                 <p className={Style.project_summary_title}>{title.charAt(0).toUpperCase() + title.slice(1)}</p>
-                <p>{data[`${title}`]}</p>
+                <pre>{data[`${title}`]}</pre>
               </div>
             );
           })}

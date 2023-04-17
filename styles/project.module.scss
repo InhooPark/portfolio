@@ -49,6 +49,9 @@
               font-family: jamsil_regular;
               line-height: 1;
             }
+            > pre {
+              white-space: pre-wrap;
+            }
           }
           > button {
             width: 6rem;

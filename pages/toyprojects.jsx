@@ -22,6 +22,7 @@ const Toyprojects = () => {
                     <img src={value.img} />
                   </a>
                 </div>
+                <p className={Style.toy_project_info}>{value.info}</p>
               </article>
             );
           })}
