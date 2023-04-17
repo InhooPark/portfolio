@@ -54,8 +54,11 @@ export const getStaticProps = async () => {
 
     toys.results.map((toy, k) => {
       if (toy.type === "paragraph") {
-        urls[key] = toy.paragraph.rich_text[0].href;
-        titles[key] = toy.paragraph.rich_text[0].plain_text;
+        // console.log(toy.paragraph.rich_text[0]);
+        if (toy.paragraph.rich_text[0] !== undefined) {
+          urls[key] = toy.paragraph.rich_text[0].href;
+          titles[key] = toy.paragraph.rich_text[0].plain_text;
+        }
       } else if (toy.type === "image") {
         imgurls[key] = toy.image.file.url;
       }
