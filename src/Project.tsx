@@ -6,15 +6,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 type typeProject = {
-  data: {
-    title: string;
-    background: string;
-    review: string;
-    stacks: string;
-    deploy: string;
-    img: string[];
-    notion: string;
-  };
+  data:
+    | any
+    | {
+        title: string;
+        background: string;
+        review: string;
+        stacks: string;
+        deploy: string;
+        img: string[];
+        notion: string;
+      };
 };
 const Project = ({ data }: typeProject) => {
   const titles = ["background", "review", "stacks", "deploy"];
