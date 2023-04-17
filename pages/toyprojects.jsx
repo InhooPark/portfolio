@@ -30,7 +30,7 @@ const Toyprojects = ({ titles, urls, imgurls }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const notion = new Client({
     auth: process.env.NOTION_TOY_SECRET,
   });
