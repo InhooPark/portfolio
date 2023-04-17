@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import MouseEvent from "@/src/MouseEvent";
 
 export const MyContext = createContext(null);

@@ -7,7 +7,7 @@
     margin: 0 auto;
     margin-top: 200px;
     article {
-      border-bottom: 1px solid #000000;
+      border-bottom: 2px solid #00000077;
       margin: 5rem auto;
       padding: 0 0 2rem;
       > h4 {
@@ -21,11 +21,17 @@
         position: relative;
         .project_img_wrap {
           width: 50%;
+          overflow: hidden;
           .mySwiper {
             .swiper_content {
               width: 100%;
+              aspect-ratio: 1;
+              border: 1px solid #00000033;
+              border-radius: 5%;
+              overflow: hidden;
               > img {
                 width: 100%;
+                aspect-ratio: 1;
                 object-fit: cover;
               }
             }
@@ -36,11 +42,12 @@
           position: relative;
           .project_summary_text {
             padding-left: 2rem;
+            line-height: 1.5;
             word-break: keep-all;
             .project_summary_title {
               font-size: 1.5rem;
               font-family: jamsil_regular;
-              line-height: 0.1;
+              line-height: 1;
             }
           }
           > button {

@@ -55,8 +55,9 @@ h6 {
 
 .swiper-pagination {
   position: relative !important;
-  // text-align: right !important;
   transform: translate3d(0, 10px, 0) !important;
+  font-size: 20px;
+  margin: 10px 0;
 }
 
 pre {
