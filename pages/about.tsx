@@ -204,7 +204,8 @@ const About = () => {
               <figcaption className={specialOn ? `${Style.profile_info_container} ${Style.on}` : Style.profile_info_container}>
                 <p className={Style.profile_info}>
                   <b>It is what it is</b> <br />
-                  이미 일어난 일은 어쩔 수 없어, 현재 상황에 맞춰 하는거지 뭐<br />
+                  이미 일어난 일은 어쩔 수 없어, 현재 상황에 맞춰 하는거지 뭐
+                  <br />
                   <br />
                   제가 가장 좋아하는 격언입니다. 현재의 제가 가장 실력이 좋은 개발자는 아니지만 현실에 충실하게 낙관적으로 헤쳐나갈 수 있는 정신력을 가지고있는
                   개발자입니다.
