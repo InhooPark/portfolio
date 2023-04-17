@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "title": "Portfolio Page",
+      "background": "포폴페이지 개발배경",
+      "review": "포폴페이지 후기",
+      "stacks": "Next.js / TypeScript",
+      "deploy": "https://kestrel-portfolio.vercel.app/",
+      "img": [
+        "/img/projects/portfolio/01.png",
+        "/img/projects/portfolio/02.png",
+        "/img/projects/portfolio/03.png",
+        "/img/projects/portfolio/04.png",
+        "/img/projects/portfolio/05.png",
+        "/img/projects/portfolio/06.png",
+        "/img/projects/portfolio/07.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/Portfolio-Page-f85aa07fe9b34dae8caead1485083bbb"
+    },
+    {
+      "title": "Pokemon SNS",
+      "background": "이전 프로젝트(daily classic)를 진행하며 DB를 활용한 페이지를 만들어보자는 생각에서 시작된 프로젝트 입니다. MySQL CRUD를 활용해 어떤 제품을 만들지 고민하던중 가장 기본적인 CRUD가 적용된 SNS 로 방향성을 잡았습니다.",
+      "review": "최초의 기획안은 Twitter를 모방한 단순한 SNS였습니다. 기본적인 글 작성, 수정, 삭제가 가능하고 데이터베이스의 정보를 불러와 그동안 포스팅된 글을 노출시켜주고, 일정한 기준에 따라 정렬된 글을 열람할 수 있는 페이지를 구상했습니다. 프로젝트를 진행하며 가장 큰 이슈는 SNS 활동을 하기 위해서는 본인의 계정이 있어야하고 로그인시 해당 계정의 인증상태를 어떻게 유지하느냐가 가장 큰 고비였습니다.",
+      "stacks": "Next.js / MySQL / Prisma / Chart.js / Crypto.js / Next-auth / Axios",
+      "deploy": "https://team-a-ashy.vercel.app/",
+      "img": [
+        "/img/projects/pokesns/01.png",
+        "/img/projects/pokesns/02.png",
+        "/img/projects/pokesns/03.png",
+        "/img/projects/pokesns/04.png",
+        "/img/projects/pokesns/05.png",
+        "/img/projects/pokesns/06.png",
+        "/img/projects/pokesns/07.png",
+        "/img/projects/pokesns/08.png",
+        "/img/projects/pokesns/09.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/Pokemon-SNS-2c1e2fb94a25436eba8b6e4371243e78"
+    },
+    {
+      "title": "BoneScatch",
+      "background": "초등학교를 다니던 시절부터 다 자란 성인이 되어서 까지 즐기던 캐치마인드, 2023년 5월 23일 캐치마인드 모바일 (쿵야 캐치마인드) 가 서비스를 종료한다는 소식을 접했고, 평소 캐치마인드를 좋아하던 유저로서, 추억을 회상하며 만들어보자는 생각으로 시작하게 된 프로젝트입니다. 간단한 본인확인 회원가입, 로그인을 구현했고 유저 개인이 4가지 부족을 선택해 부족 소속으로 문제를 해결하며 경쟁하는 서비스입니다.",
+      "review": "초기 기획은 디자인 능력이 약한 제가 감당하기 힘들 것 같아 구현된 기능 중 하나인 상점 등의 기능이 전무했던 황무지와 다름이 없는 기획안이었습니다. 단순히 캔버스에 그림을 그리고 정답을 입력해 맞추면 포인트를 주는 정도의 간단한 프로젝트의 구성안이었으나 저와 같이 캐치마인드에 대한 추억을 가지고 있는 팀원을 만나게 되었고 팀원이 디자인을 도와준 덕분에 생각하지 못했던 기능을 추가할 수 있게 되었습니다.",
+      "stacks": "Next.js / Next-auth / MySQL",
+      "deploy": "https://port-0-bonescatch-nx562oleyykw6l.sel3.cloudtype.app/",
+      "img": [
+        "/img/projects/bonescatch/01.png",
+        "/img/projects/bonescatch/02.png",
+        "/img/projects/bonescatch/03.png",
+        "/img/projects/bonescatch/04.png",
+        "/img/projects/bonescatch/05.png",
+        "/img/projects/bonescatch/06.png",
+        "/img/projects/bonescatch/07.png",
+        "/img/projects/bonescatch/08.png",
+        "/img/projects/bonescatch/09.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/BoneScatch-9c2c82bfc38348819ff5629301288ec0"
+    },
+    {
+      "title": "Daily Classic",
+      "background": "저는 대중교통을 이용해 이동하거나 취미생활을 즐기는 중 클래식 음악을 재생시켜놓는것을 좋아합니다. 특별한 이유는 없지만 가사가 있는 음악을 재생시키면 어느순간 가사에 집중하게돼 원래 하던 작업의 진행함에 있어 차질이 생기기에 가사가 없는 음악을 켜두고 작업하는것을 선호합니다. 어느날 버스를 타고 이동하던 중 클래식을 조금이라도 가깝게 느낄 수 있는 방법이 없을까? 라는 생각이 들었고 해당 프로젝트를 기획하게 되었습니다.",
+      "review": "이번 프로젝트는 아쉬운점이 많은 프로젝트였습니다. 데이터를 활용함에 있어 양질의 데이터가 얼마나 중요한지, 또한 그 데이터를 가지고 컨텐츠를 제공함에 있어 개발자 본인의 역량이 더더욱 중요한지를 알게 된 프로젝트였습니다. 추가로 배워야하는 내용은 끝이없고 배우면 배울수록 더 재미있는 프로젝트를 기획할 수 있다는 자그마한 쾌감도 느낄 수 있었던 프로젝트였기에 아쉬움역시 많지만 즐겁게 진행할 수 있었습니다.",
+      "stacks": "React.js / 서울시 공공 API / OpenweatherAPI / Openopus",
+      "deploy": "http://palbo.dothome.co.kr/",
+      "img": [
+        "/img/projects/classic/01.png",
+        "/img/projects/classic/02.png",
+        "/img/projects/classic/03.png",
+        "/img/projects/classic/04.png",
+        "/img/projects/classic/05.png",
+        "/img/projects/classic/06.png",
+        "/img/projects/classic/07.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/Daily-Classic-91614fee9be9425fb6ff186a57c35322"
+    },
+    {
+      "title": "Eclipse Re-design",
+      "background": "프로그래밍 공부 중 우연찮게 책상 앞에 있던 Eclipse 캔디가 눈에 들어왔습니다. 해당 제품은 어느나라에서 만드는지, 어떤 종류가 있는지 궁금증이 생겨 검색을 하던 중 공식 홈페이지에 접속하게 되었는데 캔디류를 판매하는 사이트임에도 딱딱한 분위기가 어색하다고 느껴 리뉴얼을 해봐야겠다는 생각이 들어 시작하게 된 프로젝트입니다.",
+      "review": "처음으로 하는 JS 기능구현과 처음으로 하는 팀프로젝트다보니 이전에는 겪어보지 못한 장애물이 많았습니다. 특히 이번 프로젝트는 이벤트를 많이 넣어보자는 취지에서 시작된 프로젝트다보니 이벤트로 인한 에러가 잦았고, 처음으로 진행한 팀프로젝트가 발생시킨 git 버전관리 문제도 있었습니다. 해당 문제들을 해결해나가는 과정에서 배울게 많았던 프로젝트였습니다.",
+      "stacks": "VanliaJS / Matter.js / Pathseg.js / Decomp.js",
+      "deploy": "https://inhoopark.github.io/C_Team/",
+      "img": [
+        "/img/projects/eclipse/01.png",
+        "/img/projects/eclipse/02.png",
+        "/img/projects/eclipse/03.png",
+        "/img/projects/eclipse/04.png",
+        "/img/projects/eclipse/05.png",
+        "/img/projects/eclipse/06.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/Eclipse-Re-design-f0b1315c2a124571a75cafbe612c3080"
+    },
+    {
+      "title": "First Clone GGCF",
+      "background": "웹 프로그래밍을 처음 접하며 HTML / CSS에 익숙해지기 위해 단조롭지만 여러가지 스타일 속성을 사용해볼 수 있는 사이트를 찾던 중 경기도 박물관 홈페이지를 선택하게 되었습니다.",
+      "review": "웹 프로그래밍을 접해본적이 없는것은 아니지만 무언가를 만들어보자는 생각을 가지고 실행한 첫 프로젝트입니다. 개념적으로만 알고있던 마크업 언어를 접하며 문서내에 정보를 삽입하는 마크업 언어만의 매력을 알게된 프로젝트입니다.",
+      "stacks": "HTML / CSS / VanilaJS / Json",
+      "deploy": "https://inhoopark.github.io/first_clone/",
+      "img": [
+        "/img/projects/clone/01.png",
+        "/img/projects/clone/02.png",
+        "/img/projects/clone/03.png",
+        "/img/projects/clone/04.png",
+        "/img/projects/clone/05.png",
+        "/img/projects/clone/06.png",
+        "/img/projects/clone/07.png"
+      ],
+      "notion": "https://kestrel-portfolio.notion.site/First-Clone-GGCF-f8592cec82cc48eda0e15f4957c71c65"
+    }
+  ]
+}

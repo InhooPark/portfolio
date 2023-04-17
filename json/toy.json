@@ -1,0 +1,9 @@
+{
+  "data": [
+    { "title": "Scheduler", "url": "https://inhoopark.github.io/toy_scheduler/", "img": "/img/toys/scheduler.png" },
+    { "title": "MyAvatar", "url": "https://inhoopark.github.io/toy_my_avatar/", "img": "/img/toys/myavatar.png" },
+    { "title": "BannerMaker", "url": "https://inhoopark.github.io/toy_banner_maker/", "img": "/img/toys/bannermaker.png" },
+    { "title": "RandomNickname", "url": "https://inhoopark.github.io/toy_random_nickname/", "img": "/img/toys/randomnickname.png" },
+    { "title": "AmbientSound", "url": "https://inhoopark.github.io/toy_ambient/", "img": "/img/toys/ambient.png" }
+  ]
+}
