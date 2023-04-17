@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRouter } from "next/router";
 
 type typeProject = {
   data: {
@@ -18,7 +17,7 @@ type typeProject = {
   };
 };
 const Project = ({ data }: typeProject) => {
-  const titles = ["개발 배경", "후기", "기술 스택", "배포"];
+  const titles = ["background", "review", "stacks", "deploy"];
 
   return (
     <article>
@@ -46,22 +45,15 @@ const Project = ({ data }: typeProject) => {
           </Swiper>
         </div>
         <figcaption className={Style.project_summary}>
-          <div className={Style.project_summary_text}>
-            <p className={Style.project_summary_title}>개발 배경</p>
-            <p>{data.background}</p>
-          </div>
-          <div className={Style.project_summary_text}>
-            <p className={Style.project_summary_title}>후기</p>
-            <p>{data.review}</p>
-          </div>
-          <div className={Style.project_summary_text}>
-            <p className={Style.project_summary_title}>기술 스택</p>
-            <p>{data.stacks}</p>
-          </div>
-          <div className={Style.project_summary_text}>
-            <p className={Style.project_summary_title}>배포</p>
-            <a href={data.deploy}>{data.deploy}</a>
-          </div>
+          {titles.map((title, key) => {
+            return (
+              <div key={key} className={Style.project_summary_text}>
+                <p className={Style.project_summary_title}>{title.charAt(0).toUpperCase() + title.slice(1)}</p>
+                <p>{data[`${title}`]}</p>
+              </div>
+            );
+          })}
+
           <button type="button">
             <a href={data.notion} target="_blank">
               {"Read-More"} <br />
