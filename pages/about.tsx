@@ -10,7 +10,8 @@ const About = () => {
   const today = new Date();
   const birth = new Date(1994, 7, 22);
   const [profileTarget, setProfileTarget] = useState([false, false, false, false]);
-  const [specialEvent, setSpecialEvent] = useState({ title: "", korTitle: "", content: "" });
+  const infoInit = { title: "It is What it is", korTitle: "(이미 일어난 일은 어쩔 수 없어)", content: "\n뭘까용\n\n 어쩌구저쩌구" };
+  const [info, setInfo] = useState(infoInit);
   const [specialOn, setSpecialOn] = useState(false);
 
   function ageFunc() {
@@ -29,33 +30,34 @@ const About = () => {
     setSpecialOn(true);
 
     switch (quad) {
-      // Special Event를 통한 나의 장단점같은거
       case 0:
-        setSpecialEvent({
+        setInfo({
           title: "Challenge",
           korTitle: "(도전)",
-          content: "네번째 분기점 요리\n\n",
+          content: "\n네번째 분기점 요리\n\n ",
         });
         break;
       case 1:
-        setSpecialEvent({
+        setInfo({
           title: "Balance",
           korTitle: "(균형)",
-          content: "첫번째 분기점 수영\n\n어릴적 아버지께서 ",
+          content:
+            "\n첫번째 분기점 수영\n\n 수영은 저에게 있어서 큰 분기점 중 하나입니다.\n수영을 잘 하려면 신체의 좌우의 균형도 중요하고, 팔이 움직이는만큼 다리도 움직여줘야하며, 호흡을 줄인만큼 속도가 오르지만 그만큼 장시간 수영을 할 경우 오히려 호흡관리에 문제가 와 낮은 퍼포먼스가 나오게 됩니다.\n 수영을 통해 모든 일에는 균형이 중요하다는 것을 알게 되었고, 균형을 유지할 수 있을 때 비로소 최선의 결과물을 얻을 수 있다는 사실을 배우게 되었습니다.",
         });
         break;
       case 2:
-        setSpecialEvent({
+        setInfo({
           title: "Creative",
           korTitle: "(창조)",
-          content: "세번째 분기점 프로그래밍\n\n",
+          content: "\n세번째 분기점 프로그래밍\n\n ",
         });
         break;
       case 3:
-        setSpecialEvent({
-          title: "Effort",
-          korTitle: "(노력)",
-          content: "두번째 분기점 게임\n\n",
+        setInfo({
+          title: "Effort, ??",
+          korTitle: "(노력과 협동)",
+          content:
+            "\n두번째 분기점 게임\n\n 저는 게임을 정말 좋아하는 아이였습니다.\n 게임을 왜 좋아했을까 생각을 해보면, 인생에서 처음으로 무언가 결과물을 냈던 행위가 게임이었기 때문인 것 같습니다. 초등학생때 시작했던 게임이 중학생이 되며 랭커반열에 오르며 누가 와도 내가 이길 수 있다는 자신감을 얻은 최초의 행위였다고 생각합니다.\n 그러한 행위를 통해 노력에는 합당한 보상이 따른다는 것을 알게 되었고, 타인과 합심하여 노력한다면 혼자서 할 때 보다 더 좋은 결과를 낼 수 있다는 협동의 미학도 알게 된 첫 경험이었습니다.",
         });
         break;
       default:
@@ -64,7 +66,7 @@ const About = () => {
   }
   function mLeave() {
     setProfileTarget([false, false, false, false]);
-    setSpecialEvent({ title: "", korTitle: "", content: "" });
+    setInfo(infoInit);
     setSpecialOn(false);
   }
 
@@ -202,22 +204,12 @@ const About = () => {
                 </div>
               </div>
               <figcaption className={specialOn ? `${Style.profile_info_container} ${Style.on}` : Style.profile_info_container}>
-                <p className={Style.profile_info}>
-                  <b>It is what it is</b> <br />
-                  이미 일어난 일은 어쩔 수 없어, 현재 상황에 맞춰 하는거지 뭐
-                  <br />
-                  <br />
-                  제가 가장 좋아하는 격언입니다. 현재의 제가 가장 실력이 좋은 개발자는 아니지만 현실에 충실하게 낙관적으로 헤쳐나갈 수 있는 정신력을 가지고있는
-                  개발자입니다.
-                  <br />
-                  새로운 기술을 공부하는데에 두려워하지 않으며 길이 막혀 돌아갈지언정 포기하지 않습니다.
-                </p>
-                <pre className={Style.profile_special}>
+                <pre className={Style.profile_info}>
                   <b>
-                    {specialEvent.title} <small>{specialEvent.korTitle}</small>
+                    {info.title} <small>{info.korTitle}</small>
                   </b>
                   <br />
-                  {specialEvent.content}
+                  {info.content}
                 </pre>
               </figcaption>
             </figure>

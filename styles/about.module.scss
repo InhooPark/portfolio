@@ -129,29 +129,12 @@
           flex-grow: 1;
           margin-left: 1vw;
           position: relative;
+
           .profile_info {
-            margin: 4px 0;
-            word-break: break-all;
-            opacity: 1;
-            position: absolute;
-            transition: opacity 300ms;
-          }
-          .profile_special {
             margin: 4px 0;
             width: 100%;
             white-space: pre-wrap;
             word-break: break-all;
-            opacity: 0;
-            position: absolute;
-            transition: opacity 300ms;
-          }
-          &.on {
-            > .profile_info {
-              opacity: 0;
-            }
-            > .profile_special {
-              opacity: 1;
-            }
           }
         }
       }
