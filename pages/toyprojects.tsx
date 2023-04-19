@@ -16,13 +16,13 @@ const Toyprojects = () => {
             return (
               <article className={Style.toy_project} key={key}>
                 <h4>{value.title}</h4>
+                <p className={Style.toy_project_info}>{value.info}</p>
 
                 <div className={Style.toy_project_img}>
                   <a href={value.url} target="_blank">
                     <img src={value.img} />
                   </a>
                 </div>
-                <p className={Style.toy_project_info}>{value.info}</p>
               </article>
             );
           })}

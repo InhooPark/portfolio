@@ -5,8 +5,7 @@
   .toy_section {
     max-width: 72rem;
     width: 90%;
-    margin: 0 auto;
-    margin-top: 150px;
+    margin: 150px auto 0;
     display: flex;
     flex-wrap: wrap;
 
@@ -46,9 +45,9 @@
         }
       }
       .toy_project_info {
-        text-align: center;
+        text-align: left;
         font-family: jamsil_regular;
-        line-height: 3;
+        line-height: 1;
       }
     }
   }
@@ -66,8 +65,9 @@
         min-width: auto;
         width: 45%;
         margin: 0;
+        margin-top: 5%;
         > h4 {
-          margin: 0;
+          margin: 10px 0;
           padding: 0;
           font-size: 1.5rem;
         }
@@ -89,7 +89,6 @@
           }
         }
         .toy_project_info {
-          text-align: center;
           font-family: jamsil_regular;
           font-size: 1.2rem;
           line-height: 1;
@@ -127,9 +126,8 @@
           }
         }
         .toy_project_info {
-          text-align: center;
           font-family: jamsil_regular;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 1;
           margin-bottom: 30px;
         }
@@ -146,6 +144,7 @@
         font-size: 1.5rem;
       }
       .toy_project {
+        width: 100%;
         > h4 {
           font-size: 1.2rem;
         }

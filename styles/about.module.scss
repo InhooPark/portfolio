@@ -37,11 +37,13 @@
         -webkit-text-stroke-width: 0.1vw;
         font-family: jamsil_light;
         -webkit-text-stroke-color: #000000;
+        animation: visual_title forwards 1000ms;
       }
       > p {
         font-size: 3vw;
         line-height: 1.5;
         text-align: center;
+        animation: visual_txt forwards 1000ms;
       }
     }
 
@@ -402,5 +404,30 @@
         }
       }
     }
+  }
+}
+
+@keyframes visual_title {
+  0% {
+    translate: 0 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes visual_txt {
+  0% {
+    translate: 0 100%;
+    opacity: 0;
+  }
+  40% {
+    translate: 0 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
   }
 }
