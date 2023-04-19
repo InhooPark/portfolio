@@ -55,7 +55,7 @@ const Project = ({ data }: typeProject) => {
                   <pre>{data[`${title}`]}</pre>
                 ) : (
                   <a href={data[`${title}`]} target="_blank">
-                    {"해당 페이지로 이동"}
+                    {"해당 페이지로 이동"}&nbsp;&nbsp;&nbsp;{">"}
                   </a>
                 )}
               </div>

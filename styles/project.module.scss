@@ -59,6 +59,7 @@
               font-size: 1rem;
               color: #000000;
               cursor: pointer;
+              animation: deploy infinite linear 2000ms;
             }
           }
           > button {
@@ -181,5 +182,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes deploy {
+  0% {
+    color: #000000;
+  }
+  50% {
+    color: #399ca3;
+  }
+  100% {
+    color: #000000;
   }
 }
