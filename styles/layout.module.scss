@@ -96,7 +96,6 @@
       outline: none;
       background-color: transparent;
       cursor: pointer;
-
       position: relative;
       z-index: 2;
       > svg {
@@ -183,6 +182,7 @@
             font-size: 2rem;
             font-family: jamsil_bold;
             -webkit-text-stroke: 1px #f47321;
+            color: #000000;
           }
         }
       }
@@ -238,6 +238,7 @@
             font-size: 3rem;
             text-align: left;
             padding-left: 3rem;
+            color: #000000;
           }
         }
 
