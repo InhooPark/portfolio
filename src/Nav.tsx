@@ -18,6 +18,7 @@ const Nav = () => {
 
   const [brushcolor, setBrushcolor] = useState("");
   const [brushtype, setBrushtype] = useState("");
+  const [burger, setBurger] = useState(false);
 
   function setbrush() {
     let color = randomBrushColor();
@@ -80,6 +81,9 @@ const Nav = () => {
   function hereis() {
     setHere(location.pathname);
   }
+  function burgerOn() {
+    setBurger(!burger);
+  }
 
   useEffect(() => {
     setbrush();
@@ -95,64 +99,92 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className={color ? `${Style.nav} ${Style.color_on}` : Style.nav}>
-      <div className={Style.nav_logo_wrap}>
-        <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("LOGO")} onMouseLeave={() => menuLeave("LOGO")}>
-          <div className={logoBrush ? `${Style.on}` : ""}>
-            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-              <path d={`${brushtype}`} />
-            </svg>
-          </div>
-          <p>{"PIH's Portfolio"}</p>
-        </button>
-      </div>
-      <div className={Style.nav_menu_wrap}>
-        <button
-          className={here === "/about" ? Style.here : ""}
-          type="button"
-          onClick={() => toPage("ABOUT")}
-          onMouseEnter={() => menuEnter("ABOUT")}
-          onMouseLeave={() => menuLeave("ABOUT")}
-        >
-          <div className={aboutBrush ? `${Style.on}` : ""}>
-            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-              <path d={`${brushtype}`} />
-            </svg>
-          </div>
-          <p>{"About me"}</p>
-        </button>
+    <>
+      <nav className={color ? `${Style.nav} ${Style.color_on}` : Style.nav}>
+        <div className={Style.nav_logo_wrap}>
+          <button type="button" onClick={() => toPage("ABOUT")} onMouseEnter={() => menuEnter("LOGO")} onMouseLeave={() => menuLeave("LOGO")}>
+            <div className={logoBrush ? `${Style.on}` : ""}>
+              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+                <path d={`${brushtype}`} />
+              </svg>
+            </div>
+            <p>{"PIH's Portfolio"}</p>
+          </button>
+        </div>
+        <div className={Style.nav_menu_wrap}>
+          <button
+            className={here === "/about" ? Style.here : ""}
+            type="button"
+            onClick={() => toPage("ABOUT")}
+            onMouseEnter={() => menuEnter("ABOUT")}
+            onMouseLeave={() => menuLeave("ABOUT")}
+          >
+            <div className={aboutBrush ? `${Style.on}` : ""}>
+              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+                <path d={`${brushtype}`} />
+              </svg>
+            </div>
+            <p>{"About me"}</p>
+          </button>
 
-        <button
-          className={here === "/projects" ? Style.here : ""}
-          type="button"
-          onClick={() => toPage("PROJECT")}
-          onMouseEnter={() => menuEnter("PROJECT")}
-          onMouseLeave={() => menuLeave("PROJECT")}
-        >
-          <div className={projectBrush ? `${Style.on}` : ""}>
-            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-              <path d={`${brushtype}`} />
-            </svg>
-          </div>
-          <p>{"Projects"}</p>
-        </button>
+          <button
+            className={here === "/projects" ? Style.here : ""}
+            type="button"
+            onClick={() => toPage("PROJECT")}
+            onMouseEnter={() => menuEnter("PROJECT")}
+            onMouseLeave={() => menuLeave("PROJECT")}
+          >
+            <div className={projectBrush ? `${Style.on}` : ""}>
+              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+                <path d={`${brushtype}`} />
+              </svg>
+            </div>
+            <p>{"Projects"}</p>
+          </button>
 
-        <button
-          className={here === "/toyprojects" ? Style.here : ""}
-          type="button"
-          onClick={() => toPage("TOY")}
-          onMouseEnter={() => menuEnter("TOY")}
-          onMouseLeave={() => menuLeave("TOY")}
-        >
-          <div className={toyBrush ? `${Style.on}` : ""}>
-            <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
-              <path d={`${brushtype}`} />
-            </svg>
+          <button
+            className={here === "/toyprojects" ? Style.here : ""}
+            type="button"
+            onClick={() => toPage("TOY")}
+            onMouseEnter={() => menuEnter("TOY")}
+            onMouseLeave={() => menuLeave("TOY")}
+          >
+            <div className={toyBrush ? `${Style.on}` : ""}>
+              <svg width="100%" viewBox="0 0 907.2 198.45" fill={`#${brushcolor}`}>
+                <path d={`${brushtype}`} />
+              </svg>
+            </div>
+            <p>{"Toy Projects"}</p>
+          </button>
+        </div>
+      </nav>
+      <nav className={burger ? `${Style.m_nav} ${Style.on}` : Style.m_nav}>
+        <div className={Style.m_nav_logo}>
+          <button type="button" onClick={() => toPage("ABOUT")}>
+            <p>{"PIH's"}</p>
+          </button>
+        </div>
+        <div className={burger ? `${Style.m_nav_burger} ${Style.on}` : Style.m_nav_burger}>
+          <button type="button" onClick={burgerOn}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div className={Style.burger}>
+            <button type="button" onClick={() => toPage("ABOUT")}>
+              Home
+            </button>
+            <button type="button" onClick={() => toPage("PROJECT")}>
+              Project
+            </button>
+            <button type="button" onClick={() => toPage("TOY")}>
+              Toy-Project
+            </button>
           </div>
-          <p>{"Toy Projects"}</p>
-        </button>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 };
 

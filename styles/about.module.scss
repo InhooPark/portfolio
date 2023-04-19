@@ -176,7 +176,7 @@
             margin-bottom: 20px;
             > svg {
               width: 64px;
-              height: 64px;
+              aspect-ratio: 1;
               fill: #000000;
             }
             > span {
@@ -201,17 +201,6 @@
         transform: translate(5px, 5px);
         box-shadow: none;
         background-color: #57abad;
-        .archive_logo_img_wrap {
-          > svg {
-            // fill: #f47341bb;
-          }
-          > span {
-            // color: #f47321bb;
-          }
-        }
-        > a > figure > figcaption {
-          // color: ;
-        }
       }
     }
   }
@@ -223,5 +212,195 @@
   }
   100% {
     top: 120%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about_main {
+    .profile_section {
+      > h2 {
+        font-size: 6vw;
+      }
+      article {
+        display: flex;
+        width: 100%;
+        vertical-align: initial;
+      }
+      .profile_info {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        > p {
+          width: 50%;
+          font-size: 1.5rem;
+          &:nth-child(2n) {
+            text-align: end;
+          }
+          > b {
+            line-height: 2;
+          }
+        }
+      }
+      .profile_about {
+        > figure {
+          margin: 0;
+          .profile_img_container {
+            display: none;
+          }
+
+          .profile_info_container {
+            margin-left: 0;
+            .profile_info {
+              font-size: 1.5rem;
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+    }
+
+    .archive_section {
+      margin: 0 auto 4rem;
+      > h2 {
+        font-size: 6vw;
+      }
+      > article {
+        width: 70%;
+        box-shadow: none;
+        margin: 1rem auto;
+        > a {
+          text-decoration: none;
+          > figure {
+            text-align: center;
+            > figcaption {
+              font-size: 1.5rem;
+              > ul {
+                > li {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          transform: translate(0);
+          background-color: initial;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .about_main {
+    .title_section {
+      .title_visual_img_wrap {
+        .visual_corner {
+          height: 30%;
+        }
+      }
+      .title_text {
+        > h1 {
+          font-size: 3rem;
+          -webkit-text-stroke: 0.1px #ffffffaa;
+        }
+        > p {
+          font-size: 2rem;
+          -webkit-text-stroke: 1px #ffffffaa;
+        }
+      }
+    }
+    .profile_section {
+      > h2 {
+        font-size: 8vw;
+        line-height: 1;
+      }
+      .profile_info {
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+        > p {
+          width: 100%;
+          font-size: 1.2rem;
+          margin: 5px auto;
+          &:nth-child(2n) {
+            text-align: start;
+          }
+        }
+      }
+      .profile_about {
+        > figure {
+          .profile_info_container {
+            .profile_info {
+              font-size: 1.2rem;
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+    }
+
+    .archive_section {
+      margin: 0 auto 2rem;
+      > h2 {
+        font-size: 8vw;
+      }
+      > article {
+        width: 90%;
+        margin: 1rem auto;
+        > a {
+          > figure {
+            > figcaption {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_main {
+    .title_section {
+      .visual_scroll {
+        > span {
+          font-size: 10px;
+          margin: 0;
+          padding: 0;
+        }
+        > p {
+          height: 80px;
+        }
+      }
+    }
+
+    .archive_section {
+      margin: 0 auto 2rem;
+      > h2 {
+        font-size: 8vw;
+      }
+      > article {
+        width: 95%;
+        margin: 5px auto;
+
+        > a {
+          > figure {
+            width: 100%;
+            margin: 0;
+            .archive_logo_img_wrap {
+              margin: 5px;
+              > span {
+                font-size: 2rem;
+              }
+            }
+            > figcaption {
+              > p {
+                word-break: break-all;
+                margin: 0;
+                padding: 0;
+              }
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

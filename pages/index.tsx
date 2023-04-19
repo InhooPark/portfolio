@@ -1,21 +1,20 @@
 import Headmeta from "@/src/Headmeta";
 import Intro from "@/src/Intro";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [inW, setInW] = useState(true);
-  const router = useRouter();
+  const [inW, setInW] = useState(2000);
 
   useEffect(() => {
-    if (window.innerWidth > 1024) {
-      setInW(true);
-    } else {
-      setInW(false);
+    setInW(window.innerWidth);
+    function resizeFunc() {
+      setInW(window.innerWidth);
     }
-  }, []);
+    window.addEventListener("resize", resizeFunc);
+    return () => window.removeEventListener("resize", resizeFunc);
+  });
 
-  if (inW) {
+  if (inW > 1024) {
     return (
       <main>
         <Headmeta title="Kestrel's Portfolio"></Headmeta>
@@ -23,6 +22,6 @@ export default function Home() {
       </main>
     );
   } else {
-    router.push("/about");
+    location.replace("/about");
   }
 }

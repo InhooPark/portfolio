@@ -25,7 +25,6 @@ const Cursor = ({ x, y }: typeCursor) => {
   }
 
   useEffect(() => {
-    // randomSet();
     cursors.current.map((cursor: any) => {
       cursor.x = 0;
       cursor.y = windowHeight;

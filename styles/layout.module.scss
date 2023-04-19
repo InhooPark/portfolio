@@ -59,6 +59,9 @@
       }
     }
   }
+  .m_nav {
+    display: none;
+  }
 }
 @keyframes svgStroke {
   from {
@@ -145,6 +148,224 @@
     &.on {
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    .nav {
+      display: none;
+    }
+    .m_nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      transition: 150ms;
+      &.on {
+        background-color: #ffffff;
+      }
+      .m_nav_logo {
+        width: 150px;
+        > button {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background-color: transparent;
+          > p {
+            font-size: 2rem;
+            font-family: jamsil_bold;
+            -webkit-text-stroke: 1px #f47321;
+          }
+        }
+      }
+      .m_nav_burger {
+        width: 100px;
+        > button {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background-color: transparent;
+          position: relative;
+          > span {
+            position: absolute;
+            display: block;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            transition: 150ms;
+            transform-origin: 50% 50%;
+            &:nth-child(1) {
+              translate: 0 -10px;
+            }
+            &:nth-child(2) {
+              transform: 0 0;
+            }
+            &:nth-child(3) {
+              translate: 0 10px;
+            }
+          }
+        }
+
+        .burger {
+          width: 100vw;
+          height: 0;
+          background-color: #ffffff;
+          position: fixed;
+          top: 100px;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: height 150ms;
+          overflow: hidden;
+          > button {
+            width: 100%;
+            height: 20%;
+            border: none;
+            border-bottom: 1px solid #00000033;
+            background-color: transparent;
+            font-size: 3rem;
+            text-align: left;
+            padding-left: 3rem;
+          }
+        }
+
+        &.on {
+          > button > span {
+            &:nth-child(1) {
+              rotate: 45deg;
+              translate: -5px 10.5px;
+            }
+            &:nth-child(2) {
+              scale: 0 1;
+              translate: 50px 0;
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              rotate: -45deg;
+              translate: -5px -10.5px;
+            }
+          }
+          .burger {
+            height: calc(100vh - 100px);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0;
+    .footer_btn_wrap {
+      display: flex;
+      justify-content: center;
+      > button {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+        > svg {
+          height: 45px;
+          fill: #ffffff;
+          transition: 100ms;
+        }
+        > span {
+          color: #ffffff;
+          text-align: center;
+          font-size: 1.5rem;
+          transition: 100ms;
+        }
+
+        &:hover {
+          > svg {
+            fill: #ffffff;
+          }
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .footer_info {
+      > p {
+        text-align: center;
+        color: #aaaaaa;
+      }
+    }
+    > p {
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    .m_nav {
+      .m_nav_burger {
+        .burger {
+          > button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0;
+    .footer_btn_wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 20%;
+      > button {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-top: 10px;
+        padding: 2px;
+        > svg {
+          height: 30px;
+          aspect-ratio: 1;
+        }
+        > span {
+          color: #ffffff;
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+    }
+    .footer_info {
+      > p {
+        text-align: center;
+        color: #aaaaaa;
+        padding: 0;
+        margin: 5px;
+      }
+    }
+    > p {
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
     }
   }
 }
