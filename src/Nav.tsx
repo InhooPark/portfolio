@@ -28,8 +28,11 @@ const Nav = () => {
   }
 
   function toPage(page: string) {
+    const bodyEl = document.querySelector("body");
+    if (bodyEl !== null) bodyEl.style.overflow = "auto";
     switch (page) {
       case "ABOUT":
+        setBurger(false);
         router.push("/about");
         break;
       case "PROJECT":
@@ -83,6 +86,14 @@ const Nav = () => {
   }
   function burgerOn() {
     setBurger(!burger);
+
+    if (burger) {
+      const bodyEl = document.querySelector("body");
+      if (bodyEl !== null) bodyEl.style.overflow = "auto";
+    } else {
+      const bodyEl = document.querySelector("body");
+      if (bodyEl !== null) bodyEl.style.overflow = "hidden";
+    }
   }
 
   useEffect(() => {

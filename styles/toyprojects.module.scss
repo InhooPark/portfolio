@@ -6,7 +6,7 @@
     max-width: 72rem;
     width: 90%;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     display: flex;
     flex-wrap: wrap;
 
@@ -28,7 +28,7 @@
         padding: 0;
       }
       .toy_project_img {
-        border: 1px solid black;
+        border: 1px solid #00000033;
         min-width: 240px;
         width: 100%;
         aspect-ratio: 3/1;
@@ -49,6 +49,109 @@
         text-align: center;
         font-family: jamsil_regular;
         line-height: 3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .toy_main {
+    .toy_section {
+      margin-top: 100px;
+      justify-content: space-between;
+      > h2 {
+        font-size: 3rem;
+      }
+      .toy_project {
+        min-width: auto;
+        width: 45%;
+        margin: 0;
+        > h4 {
+          margin: 0;
+          padding: 0;
+          font-size: 1.5rem;
+        }
+        .toy_project_img {
+          min-width: auto;
+          width: 100%;
+          aspect-ratio: 3/1;
+          margin-top: 2.5%;
+          > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        .toy_project_info {
+          text-align: center;
+          font-family: jamsil_regular;
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .toy_main {
+    .toy_section {
+      justify-content: space-between;
+      > h2 {
+        font-size: 2.5rem;
+      }
+      .toy_project {
+        min-width: auto;
+        width: 45%;
+        margin: 0;
+        > h4 {
+          font-size: 1.2rem;
+        }
+        .toy_project_img {
+          > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        .toy_project_info {
+          text-align: center;
+          font-family: jamsil_regular;
+          font-size: 12px;
+          line-height: 1;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toy_main {
+    .toy_section {
+      justify-content: space-between;
+      > h2 {
+        font-size: 1.5rem;
+      }
+      .toy_project {
+        > h4 {
+          font-size: 1.2rem;
+        }
+        .toy_project_info {
+          font-size: 1rem;
+        }
       }
     }
   }

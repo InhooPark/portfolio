@@ -51,7 +51,13 @@ const Project = ({ data }: typeProject) => {
             return (
               <div key={key} className={Style.project_summary_text}>
                 <p className={Style.project_summary_title}>{title.charAt(0).toUpperCase() + title.slice(1)}</p>
-                <pre>{data[`${title}`]}</pre>
+                {title !== "deploy" ? (
+                  <pre>{data[`${title}`]}</pre>
+                ) : (
+                  <a href={data[`${title}`]} target="_blank">
+                    {"해당 페이지로 이동"}
+                  </a>
+                )}
               </div>
             );
           })}

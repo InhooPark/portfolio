@@ -10,6 +10,9 @@
       border-bottom: 2px solid #00000077;
       margin: 5rem auto;
       padding: 0 0 2rem;
+      &:last-child {
+        border-bottom: none;
+      }
       > h4 {
         text-align: end;
         font-size: 3rem;
@@ -52,6 +55,11 @@
             > pre {
               white-space: pre-wrap;
             }
+            > a {
+              font-size: 1rem;
+              color: #000000;
+              cursor: pointer;
+            }
           }
           > button {
             width: 6rem;
@@ -73,6 +81,101 @@
             > a {
               text-decoration: none;
               color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project_main {
+    .project_section {
+      article {
+        > h4 {
+          font-size: 4rem;
+        }
+        > figure {
+          display: flex;
+          flex-direction: column;
+          .project_img_wrap {
+            width: 100%;
+          }
+          .project_summary {
+            width: 100%;
+            .project_summary_text {
+              padding-left: 0;
+              .project_summary_title {
+                font-size: 2rem;
+              }
+              > pre {
+                font-size: 1.5rem;
+              }
+              > a {
+                font-size: 1.5rem;
+              }
+            }
+            > button {
+              width: 10rem;
+              height: 4rem;
+              border-radius: 0.8rem;
+              box-shadow: none;
+              &:hover {
+                transform: translate(0);
+              }
+              > a {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .project_main {
+    .project_section {
+      width: 100%;
+      article {
+        border-bottom: 0.3px solid #00000033;
+        > h4 {
+          font-size: 2rem;
+        }
+        > figure {
+          width: 95%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          .project_img_wrap {
+            width: 100%;
+          }
+          .project_summary {
+            width: 100%;
+            .project_summary_text {
+              padding-left: 0;
+              .project_summary_title {
+                font-size: 1.5rem;
+              }
+              > pre {
+                font-size: 1.2rem;
+              }
+              > a {
+                font-size: 1.2rem;
+              }
+            }
+            > button {
+              width: 10rem;
+              height: 4rem;
+              border-radius: 0.8rem;
+              box-shadow: none;
+              &:hover {
+                transform: translate(0);
+              }
+              > a {
+                font-size: 1.2rem;
+              }
             }
           }
         }
