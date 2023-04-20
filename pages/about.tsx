@@ -14,7 +14,7 @@ const About = () => {
     title: "It is what it is",
     korTitle: "(이미 일어난 일은 어쩔 수 없어)",
     content:
-      "\n그냥 하는 사람\n\n 저는 최고라는 오만한 말은 하지 못해도, 최선을 다해 노력하고 있다고는 말 할 수 있는 사람입니다.\n 늘 낙관적으로 상황을 바라보기위해 노력하고 문제 해결을 위해 노력하는 사람입니다.\n 해결하기 어려운 문제가 발생한다면 고민하는 시간에 일단 시도하려고 노력하는 사람입니다.",
+      "\n그냥 하는 사람\n\n 프로 스포츠 선수들의 'It is what it is'\n 스포츠용품 제작 회사인 나이키사(社)의 'Just do it'\n 그들이 공통적으로 말하는 것, 이미 상황은 벌어졌고 그냥 해!\n 그냥 하는 남자 박인후입니다.",
   };
   const [info, setInfo] = useState(infoInit);
   const [specialOn, setSpecialOn] = useState(false);
