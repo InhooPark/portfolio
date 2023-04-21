@@ -39,6 +39,11 @@ body {
   font-family: jamsil_light;
 }
 
+#__next {
+  overflow: hidden;
+  position: relative;
+}
+
 b,
 strong {
   font-family: jamsil_bold;
