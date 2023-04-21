@@ -29,6 +29,12 @@
       "url": "https://inhoopark.github.io/toy_ambient/",
       "img": "/img/toys/ambient.png",
       "info": "생각이 너무 많아졌을때"
+    },
+    {
+      "title": "Greatest painter",
+      "url": "https://inhoopark.github.io/toy_passpartout/",
+      "img": "/img/toys/passpartout.png",
+      "info": "최고의 화가가 되어보세요"
     }
   ]
 }
